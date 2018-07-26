@@ -7,9 +7,9 @@ def index():
 
 
 @app.route('/bmi/<int:weight>/<int:height>')
-def cal_bmi(weight,height) :
+def bmi(weight,height) :
     bmi = (weight*10**4)/(height**2)
-    return render_template ('bmi.html',bmi = bmi )
+    return render_template("tinh_bmi.html", bmi = bmi)
 if __name__ == '__main__':
   app.run(debug=True)
  
