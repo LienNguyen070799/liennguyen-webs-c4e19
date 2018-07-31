@@ -22,7 +22,7 @@ def customer() :
     return render_template('customers.html', all_customer = all_customer)
 @app.route('/not_yet_connected_customer')
 def not_customer() :
-    not_customer = Customer.objects(connected = False)
+    not_customer = Customer.objects(connected = False, gender = 1)
     if len(not_customer) <= 10 :
         new_customer = not_customer
     else:
