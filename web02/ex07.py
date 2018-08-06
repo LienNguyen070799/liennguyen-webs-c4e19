@@ -1,11 +1,13 @@
 import mongoengine
+from pymongo import *
 # 
-# mongodb://<dbuser>:<dbpassword>@ds245277.mlab.com:45277/mua_dong_khong_lanh_c4e19
-host = "ds245277.mlab.com"
-port = 45277
-db_name = "mua_dong_khong_lanh_c4e19"
-user_name = "lienlien"
-password = "nguyenlien99"
+# mongodb://admin:admin@ds021182.mlab.com:21182/c4e
+
+host = "ds021182.mlab.com"
+port = 21182
+db_name = "c4e"
+user_name = "admin"
+password = "admin"
 
 
 def connect():
@@ -19,3 +21,4 @@ def list2json(l):
 def item2json(item):
     import json
     return json.loads(item.to_json())
+

@@ -12,15 +12,18 @@
     <h1>Hello</h1>
     {% for service in all_service %}
     <div>{% if service.gender == 1 %}
-        <img src="../static/image/male-profile.jpg">
+        <img src="../static/image/male-profile.jpg" >
+        
         {% elif service.gender == 0 %}
         <img src="../static/image/female-profile.jpg">
+        
         {% endif %}
         <br>
         <b>Ten : {{service.name}}</b>
         <p>Nam sinh : {{service.yob}} </p>
         <p> Chieu cao : {{service.height}} </p>
         <p> Dia chi : {{service.address}} </p>
+        <a href="{{url_for('detail')}}">Xem chi tiết</a>
         <hr>
     </div>
     {% endfor %}

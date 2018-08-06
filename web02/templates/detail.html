@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dịch vụ thuê gấu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+        {% for service in all_service %}
+        <div>
+            {% if service.name == 'Trâm Anh' %}
+            <img src="http://media22.tiin.vn//archive/imageslead/360/201806/20180627/thumb00_021409873057066.jpg" >            
+            {% elif service.name == 'Pew Pew' %}
+            <img src="https://caothu360.com/wp-content/uploads/2017/06/thump-pewpew-mat-facebook.jpg">            
+            {% elif service.name == 'Linh Ka' %}
+            <img src="https://vcdn-ione.vnecdn.net/2018/04/17/500htRap-1523960055-7395-1523960076_300x180.jpg" >            
+            {% else %}
+            <img src="https://www.detectiveconanworld.com/wiki/images/thumb/d/d4/Ran-shinichi-1411936a48-1-.jpg/320px-Ran-shinichi-1411936a48-1-.jpg">           
+            {% endif %}
+            <br>
+            <b>Tên : {{service.name}}</b>
+            <p>Năm sinh : {{service.yob}} </p>
+            <p>Chiều cao : {{service.height}} </p>
+            <p>Địa chỉ : {{service.address}} </p>   
+            <p>Số điện thoại : {{service.phone}}</p>     
+            <p>Mô tả : {{service.description}}</p>   
+            <p>Số đo 3 vòng: {{service.measurements}}</p>
+            <hr>
+        </div>
+        {% endfor %}
+        
+</body>
+</html>
